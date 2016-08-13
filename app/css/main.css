@@ -1,0 +1,76 @@
+/***********************
+
+Body
+
+***********************/
+
+/***********************
+
+Navigation
+
+***********************/
+nav{
+	  position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem 0;
+    z-index: 99;
+    -webkit-transition: 0.25s all 0s;
+    transition: 0.25s all 0s;
+    box-shadow: 0 0 6px rgba(0,0,0,0);
+    background: rgba(0,0,0,0.6);
+}
+.navbar {
+    padding: .8rem 1rem;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,.65);
+}
+.navbar-dark .navbar-nav .active>.nav-link, 
+.navbar-dark .navbar-nav .active>.nav-link:focus, 
+.navbar-dark .navbar-nav .active>.nav-link:hover, 
+.navbar-dark .navbar-nav .nav-link.active, 
+.navbar-dark .navbar-nav .nav-link.active:focus, 
+.navbar-dark .navbar-nav .nav-link.active:hover, 
+.navbar-dark .navbar-nav .nav-link.open, 
+.navbar-dark .navbar-nav .nav-link.open:focus, 
+.navbar-dark .navbar-nav .nav-link.open:hover, 
+.navbar-dark .navbar-nav .open>.nav-link,
+ .navbar-dark .navbar-nav .open>.nav-link:focus, 
+.navbar-dark .navbar-nav .open>.nav-link:hover{
+  color: #d0dd28;
+}
+.nav-register-now{
+    margin-top: .106rem;
+    margin-left: 1rem;
+}
+/***********************
+
+Top Banner
+
+***********************/
+
+
+/***********************
+
+Footer
+
+***********************/
+
+
+/***********************
+
+Modal
+
+***********************/
+
+
+/***********************
+
+Responsive layout
+
+***********************/
+
