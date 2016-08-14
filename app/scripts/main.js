@@ -15,4 +15,15 @@
       return window.history.pushState(null, null, target);
     });
   });
- 
+  /* onScroll show event    
+  ============================*/
+  $(window).scroll( function(){
+    $('[data-scroll="show"]').each( function(i){
+      var object_bottom = $(this).offset().top + $(this).outerHeight();
+      var window_bottom = $(window).scrollTop() + $(window).height();
+      /* If the object is completely visible in the window, fade it it */
+      if( window_bottom > object_bottom  ){
+        $('.client-image').fadeTo( 250, 1).addClass('fade-in-up',100)
+      }
+    });
+  });

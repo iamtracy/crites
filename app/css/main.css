@@ -1,76 +1,106 @@
 /***********************
 
-Body
+DRY
 
 ***********************/
-
+.brand-bg-pri{
+    background: #001c3d;
+}
+.brand-txt-pri{
+    background: #001c3d;
+}
+.brand-bg-sec{
+    color: #005d7a;
+}
+.brand-txt-sec{
+    color: #005d7a;
+}
 /***********************
 
 Navigation
 
 ***********************/
-nav{
-	  position: fixed;
+.navbar{
+    position: fixed;
     display: block;
-    top: 0;
-    left: 0;
     width: 100%;
-    box-sizing: border-box;
     padding: 1rem 0;
-    z-index: 99;
     -webkit-transition: 0.25s all 0s;
     transition: 0.25s all 0s;
-    box-shadow: 0 0 6px rgba(0,0,0,0);
-    background: rgba(0,0,0,0.6);
+    border-radius: 0 !important;
+    z-index: 1000; 
+    border: none;
+    min-height: 
 }
-.navbar {
-    padding: .8rem 1rem;
+.navbar-nav li a{
+    color: #fff;
 }
-.navbar-dark .navbar-nav .nav-link {
-    color: rgba(255,255,255,.65);
-}
-.navbar-dark .navbar-nav .active>.nav-link, 
-.navbar-dark .navbar-nav .active>.nav-link:focus, 
-.navbar-dark .navbar-nav .active>.nav-link:hover, 
-.navbar-dark .navbar-nav .nav-link.active, 
-.navbar-dark .navbar-nav .nav-link.active:focus, 
-.navbar-dark .navbar-nav .nav-link.active:hover, 
-.navbar-dark .navbar-nav .nav-link.open, 
-.navbar-dark .navbar-nav .nav-link.open:focus, 
-.navbar-dark .navbar-nav .nav-link.open:hover, 
-.navbar-dark .navbar-nav .open>.nav-link,
- .navbar-dark .navbar-nav .open>.nav-link:focus, 
-.navbar-dark .navbar-nav .open>.nav-link:hover{
-  color: #d0dd28;
-}
-.nav-register-now{
-    margin-top: .106rem;
-    margin-left: 1rem;
+.navbar-nav li a:hover{
+    background-color: transparent;
 }
 /***********************
 
-Top Banner
+Top Section - Carousel
 
 ***********************/
-
 
 /***********************
 
-Footer
+Jumbotron
 
 ***********************/
+.jumbotron{
+    background: #fff;
+    padding-top: 3rem;
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 5px 10px;
+    background-color: #fff;
+    font-size: 1.2rem;
+    border: none;
+}
+/***********************
 
+Products
+
+***********************/
+.offerings{
+    margin-top: 4rem;
+    width: 95%;
+    margin-left: auto; 
+    margin-right: auto; 
+}
 
 /***********************
 
-Modal
+clients
 
 ***********************/
-
-
+.clients{
+    background: #f3f3f3;
+}
+.client-image{
+    opacity: 0;
+    transform: translate(0, 5px); 
+} 
+.fade-in-up{
+    transition: .1s ease-in;
+    transform: translate(0, -15px);
+}
 /***********************
 
 Responsive layout
 
 ***********************/
-
+@media screen and (max-width: 542px){
+    .offerings-item:not(:first-child){
+        margin-top: 1.8rem;
+    }
+}
+@media screen and (min-width: 543px) and (max-width: 990px){
+    .offerings-item:nth-child(n+3){
+        margin-top: 1.8rem;
+    }
+}
