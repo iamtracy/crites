@@ -3,17 +3,24 @@
 DRY
 
 ***********************/
+body{
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 16px;
+}
 .brand-bg-pri{
     background: #001c3d;
 }
 .brand-txt-pri{
-    background: #001c3d;
+    color: #001c3d;
 }
 .brand-bg-sec{
-    color: #005d7a;
+    background: #005d7a;
 }
 .brand-txt-sec{
     color: #005d7a;
+}
+.no-border{
+    border: none;
 }
 /***********************
 
@@ -22,28 +29,34 @@ Navigation
 ***********************/
 .navbar{
     position: fixed;
+    padding: 0;
     display: block;
     width: 100%;
-    padding: 1rem 0;
     -webkit-transition: 0.25s all 0s;
     transition: 0.25s all 0s;
-    border-radius: 0 !important;
     z-index: 1000; 
     border: none;
-    min-height: 
 }
-.navbar-nav li a{
-    color: #fff;
+.nav-link{
+    margin-right: 1.5rem;
+    padding: .9rem 0;
 }
-.navbar-nav li a:hover{
-    background-color: transparent;
-}
+
 /***********************
 
 Top Section - Carousel
 
 ***********************/
+.carousel{
+    margin-top: 59px;
+}
 
+.carousel-indicators li{
+    border: 1px solid #001c3d;
+}
+.carousel-indicators .active {
+    background-color: #005d7a;
+}
 /***********************
 
 Jumbotron
@@ -53,14 +66,7 @@ Jumbotron
     background: #fff;
     padding-top: 3rem;
 }
-.list-group-item {
-    position: relative;
-    display: block;
-    padding: 5px 10px;
-    background-color: #fff;
-    font-size: 1.2rem;
-    border: none;
-}
+
 /***********************
 
 Products
@@ -72,22 +78,91 @@ Products
     margin-left: auto; 
     margin-right: auto; 
 }
-
+.product-table-box .product-title {
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 700;
+    background-color: #53c5d5;
+    margin: 0;
+    text-align: center;
+    padding: 10px 15px;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+}
+.product-table-box:hover  .product-title{
+    background-color: #d65469;
+}
+.product-table-box .description {
+    max-width: 280px;
+    margin: 15px 12px;
+    display: table;
+}
+.card{
+    border: none;
+}
+.card-block{
+    padding: 0;
+}
+.list-icon li::before{
+    font-family: FontAwesome;
+    content: "\f0a9";
+    margin-right: 1rem;
+}
+.grid-pattern{
+    background: url('../img/grid-pattern.png'), url('../img/parallax.png');
+    background-attachment: fixed;
+    
+}
+.products-section {
+    background-color:  rgba(0,0,0,.354); 
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+.product-header{
+    color: #fff;
+}
+.products-btn{
+    position: absolute;
+    bottom: 1%;
+    width: 85%;
+    left: 7.7%;
+}
 /***********************
 
 clients
 
 ***********************/
-.clients{
+.clients,
+.contact{
     background: #f3f3f3;
 }
-.client-image{
+/*.client-image{
     opacity: 0;
     transform: translate(0, 5px); 
 } 
 .fade-in-up{
     transition: .1s ease-in;
-    transform: translate(0, -15px);
+    transform: translate(0, -1.4rem);
+}*/
+/***********************
+
+contact
+
+***********************/
+.form-control {
+    padding: 1.375rem .75rem;
+}
+.form-control-message {
+    padding: 3.375rem .75rem;
+}
+::-webkit-placeholder, 
+::-moz-placeholder,
+:-ms-input-placeholder, 
+:-moz-placeholder{
+  vertical-align: top;
 }
 /***********************
 
@@ -98,9 +173,14 @@ Responsive layout
     .offerings-item:not(:first-child){
         margin-top: 1.8rem;
     }
+    .card {
+        margin-bottom: .75rem;
+    }
 }
 @media screen and (min-width: 543px) and (max-width: 990px){
     .offerings-item:nth-child(n+3){
         margin-top: 1.8rem;
     }
 }
+
+

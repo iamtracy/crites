@@ -27,3 +27,19 @@
       }
     });
   });
+
+/* Card Heigh Control      
+    ================================*/ 
+  var cardMaxHeight = -1;
+  
+  if ($(window).width() > 760) {
+    //Card Header
+    $('.card').each(function() {
+        if ($(this).height() > cardMaxHeight) {
+          cardMaxHeight = $(this).height();
+        }
+        });
+    $('.card').height(cardMaxHeight);
+    }
+  /* End Card Heigh Control      
+    ================================*/ 
